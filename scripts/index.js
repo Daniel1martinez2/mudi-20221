@@ -5,7 +5,21 @@ console.log(inputs)
 const regEx = /^[a-zA-Z]+$/;
 
 const cleanInput = () => {
-  inputs.forEach(char => char.innerHTML = '')
+
+  inputs.forEach(char => {
+    char.innerHTML = '';
+    char.classList.remove('done');
+    char.classList.remove('almost');
+    char.classList.remove('wrong');
+  })
+}
+
+const updateState = () => {
+  charArray.forEach((char, index) => {
+    console.log(charArray)
+    inputs[index].innerHTML = char.key;
+    inputs[index].classList.add(char.state);
+  })
 }
 
 const checkArrows = (value) =>{
@@ -13,26 +27,26 @@ const checkArrows = (value) =>{
 } 
 
 document.body.addEventListener('keydown', (e) => {
-  console.log(e.key);
+  console.log(e.key, 'ss');
+  let state;
   if(e.key === 'Backspace'){
     charArray.pop();
     console.log(charArray)
     cleanInput();
-    charArray.forEach((char, index) => inputs[index].innerHTML = char)
+    updateState();
   }else{
     if(charArray.length + 1 > 10 || !e.key.match(regEx) || e.key === 'Enter' || !checkArrows(e.key)) return;
-    charArray.push(e.key);
-    charArray.forEach((char, index) => {
-      inputs[index].innerHTML = char;
-      if(word.includes(e.key) && word[charArray.length - 1] === e.key){
-        console.log('🍎')
-        inputs[index].classList.add('done')
-      }else if(word.includes(e.key)){
-        inputs[index].classList.add('almost')
-      }else{
-        inputs[index].classList.add('wrong')
-      }
-    })
+    
+    if(word.includes(e.key) && word[charArray.length] === e.key){
+      console.log('🍎')
+      state = "done"
+    }else if(word.includes(e.key)){
+      state = "almost"
+    }else{
+      state = "wrong"
+    }
+    charArray.push({key: e.key, state});
+    updateState();
   }
 
 })
