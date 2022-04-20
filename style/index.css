@@ -102,6 +102,7 @@ input {
     width: 30em;
   }
   .inputs {
+    z-index: 2;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -130,6 +131,11 @@ input {
         -ms-flex-align: center;
             align-items: center;
     overflow: hidden;
+  }
+  .input_invisible {
+    opacity: 0;
+    visibility: hidden;
+    width: 10px;
   }
   .wrong {
     background-color: #ff7575;

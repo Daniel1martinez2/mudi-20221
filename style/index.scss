@@ -52,6 +52,7 @@
 
 .inputs{
   
+  z-index: 2;
   position: absolute;
   display: flex;
   margin-top:2em;
@@ -73,6 +74,11 @@
   overflow: hidden;
 }
 
+.input_invisible{
+ opacity: 0;
+ visibility: hidden;
+ width:10px;
+}
 
 .wrong{
   background-color: rgb(255, 117, 117);
