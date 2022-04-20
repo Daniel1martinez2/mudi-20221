@@ -29,9 +29,8 @@ const goInsta = () => {
 
 
 inputsall.addEventListener("click", ()=>{
-  inputsall.prompt();
   inputsall.focus();
-
+  console.log("hiceclick");
 
 })
 
