@@ -3,6 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Gotham';
+  src: url(/resources/Gotham-Bold.otf);
+}
+body{
+  font-family: 'Gotham',sans-serif;
+}
 
 .inputs{
   display: flex;
@@ -21,6 +28,7 @@
   overflow: hidden;
 }
 .container{
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,4 +49,9 @@
 
 .done{
   background-color: rgb(142, 255, 142)
+}
+
+.btnEnter{
+  background-color: white;
+  color: black;
 }
