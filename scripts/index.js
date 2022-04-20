@@ -1,6 +1,7 @@
 const charArray = [];
 const word = 'distorsion'
 const inputs = document.querySelectorAll('.char')
+const inputsall = document.getElementById('inputs')
 console.log(inputs)
 const regEx = /^[a-zA-Z]+$/;
 const btnEnter = document.getElementById('btnEnter')
@@ -26,6 +27,13 @@ const goInsta = () => {
 
 }
 
+
+inputsall.addEventListener("click", ()=>{
+  inputsall.prompt();
+  inputsall.focus();
+
+
+})
 
 
 btnEnter.addEventListener("click", goInsta);
