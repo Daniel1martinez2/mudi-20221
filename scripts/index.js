@@ -34,12 +34,6 @@ inputsall.addEventListener("click", ()=>{
   console.log("hiceclick");
 })
 
-inputsall.addEventListener('touchstart', () => {
-  inputsall.focus();
-  inputsall.contentEditable = false;
-  console.log("hiceclick");
-})
-
 
 btnEnter.addEventListener("click", goInsta);
 
