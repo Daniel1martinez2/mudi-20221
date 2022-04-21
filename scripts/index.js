@@ -32,7 +32,7 @@ inputsall.addEventListener("click", ()=>{
   document.querySelector(".fakeInput").focus();
   //inputsall.focus();
   console.log(  document.querySelector(".fakeInput") )
-  inputsall.contentEditable = false;
+  //inputsall.contentEditable = false;
   console.log("hiceclick");
 })
 
