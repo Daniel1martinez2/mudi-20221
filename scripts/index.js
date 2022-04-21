@@ -52,7 +52,7 @@ const cleanInput = () => {
 const updateState = () => {
   charArray.forEach((char, index) => {
     console.log(charArray)
-    inputs[index].innerHTML = char.key;
+    inputs[index].innerHTML = char.key.slice(-1)
     inputs[index].classList.add(char.state);
   })
 }
