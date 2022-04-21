@@ -31,7 +31,13 @@ const goInsta = () => {
 inputsall.addEventListener("click", ()=>{
   inputsall.focus();
   inputsall.contentEditable = false;
+  console.log("hiceclick");
+})
 
+inputsall.addEventListener('touchstart', () => {
+  inputsall.focus();
+  inputsall.contentEditable = false;
+  console.log("hiceclick");
 })
 
 
