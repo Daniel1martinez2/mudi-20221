@@ -30,7 +30,7 @@ const goInsta = () => {
 
 inputsall.addEventListener("click", ()=>{
   inputsall.focus();
-  inputs.contentEditable = false;
+  inputsall.contentEditable = false;
 
 })
 
