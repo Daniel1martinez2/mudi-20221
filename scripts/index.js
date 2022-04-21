@@ -30,7 +30,7 @@ const goInsta = () => {
 
 inputsall.addEventListener("click", ()=>{
   document.querySelector(".fakeInput").focus();
-  inputsall.focus();
+  //inputsall.focus();
   console.log(  document.querySelector(".fakeInput") )
   inputsall.contentEditable = false;
   console.log("hiceclick");
